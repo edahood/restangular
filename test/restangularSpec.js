@@ -1,6 +1,6 @@
 describe("Restangular", function() {
   // API
-  var Restangular, $httpBackend;
+  var Restangular, $httpBackend, _;
   var accountsModel, restangularAccounts, restangularAccount0, restangularAccount1;
   var accountsHalModel;
   var messages, newAccount;
@@ -114,7 +114,7 @@ describe("Restangular", function() {
     $httpBackend.whenGET(urlRegex).respond(function(method, url, data, headers) {
       return [url.match(urlRegex)[1], {}, ""];
     });
-
+    _ = $injector.get("lodash");
     Restangular = $injector.get("Restangular");
     restangularAccounts = Restangular.all("accounts");
     restangularAccount0 = Restangular.one("accounts", 0);

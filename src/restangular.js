@@ -1,8 +1,9 @@
 (function() {
 
-var restangular = angular.module('restangular', []);
+var restangular = angular.module('restangular', ['knLodash']);
 
-restangular.provider('Restangular', function() {
+restangular.provider('Restangular', function(lodash) {
+  var _ = lodash;
   // Configuration
   var Configurer = {};
   Configurer.init = function(object, config) {

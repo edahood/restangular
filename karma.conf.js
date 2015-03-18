@@ -11,9 +11,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.6/angular.js',
-      'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.6/angular-mocks.js',
-      'http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js',
+      'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js',
+      'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-mocks.js',
+     /* 'http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.js',*/
+      'bower_components/kn-lodash/build/kn-lodash.js',
       'src/restangular.js',
       'test/*.js'
     ],

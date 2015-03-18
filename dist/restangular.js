@@ -1,13 +1,14 @@
 /**
  * Restful Resources service for AngularJS apps
- * @version v1.4.0 - 2015-02-04 * @link https://github.com/mgonto/restangular
+ * @version v1.5.0 - 2015-03-18 * @link https://github.com/edahood/restangular
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function() {
 
-var restangular = angular.module('restangular', []);
+var restangular = angular.module('restangular', ['knLodash']);
 
-restangular.provider('Restangular', function() {
+restangular.provider('Restangular', function(lodash) {
+  var _ = lodash;
   // Configuration
   var Configurer = {};
   Configurer.init = function(object, config) {
@@ -725,7 +726,7 @@ restangular.provider('Restangular', function() {
                    replace(/%20/g, (pctEncodeSpaces ? '%20' : '+'));
       }
 
-      if (!params) { return url; }
+      if (!params) { return url + (this.config.suffix || ''); }
 
       var parts = [];
       forEachSorted(params, function(value, key) {

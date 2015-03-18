@@ -151,7 +151,7 @@ You can download this by:
 
 #Dependencies
 
-Restangular depends on Angular and Lodash (or Underscore).
+Restangular depends on Angular and kn-lodash (angular lodash wrapper).
 
 **[Back to top](#table-of-contents)**
 
@@ -184,7 +184,7 @@ The Restangular service may be injected into any Controller or Directive :)
 Note: When adding Restangular as a dependency it is not capitalized 'restangular'
       But when injected into your controller it is 'Restangular'
 
-**[Back to top](#table-of-contents)**      
+**[Back to top](#table-of-contents)**
 
 ## Using Restangular
 
